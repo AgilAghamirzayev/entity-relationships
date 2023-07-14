@@ -5,12 +5,12 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.LastModifiedBy;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -39,6 +39,16 @@ public class Order {
     @JoinColumn(name = "billing_address_id")
     @ToString.Exclude
     private Address billingAddress;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "order_id")
+    private Set<OrderItem> orderItems;
+
+    public BigDecimal getTotalAmount() {
+        return orderItems.stream()
+                .map(item -> item.getProduct().getPrice())
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
 
     @Override
     public boolean equals(Object o) {

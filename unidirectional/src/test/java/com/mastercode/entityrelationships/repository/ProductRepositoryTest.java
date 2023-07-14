@@ -15,7 +15,7 @@ class ProductRepositoryTest {
 
     @Test
     void saveProduct() {
-        Product product = Product.builder()
+        Product product1 = Product.builder()
                 .name("product 1")
                 .description("product 1 description")
                 .sku("100ABX")
@@ -24,9 +24,18 @@ class ProductRepositoryTest {
                 .imageUrl("product1.jpg")
                 .build();
 
-        Product savedProduct = productRepository.save(product);
 
-        System.out.println(savedProduct);
+        Product product2 = Product.builder()
+                .name("product 2")
+                .description("product 2 description")
+                .sku("100ABC")
+                .price(new BigDecimal("12.99"))
+                .active(Boolean.TRUE)
+                .imageUrl("product2.jpg")
+                .build();
+
+        productRepository.save(product1);
+        productRepository.save(product2);
     }
 
 
