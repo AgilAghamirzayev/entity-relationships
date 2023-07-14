@@ -1,7 +1,6 @@
 package com.mastercode.entityrelationships.repository;
 
-import com.mastercode.entityrelationships.uni.entity.Product;
-import com.mastercode.entityrelationships.uni.repository.ProductRepository;
+import com.mastercode.entityrelationships.entity.Product;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

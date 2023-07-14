@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-address-table
+      author: Agil Aghamirzayev
+      changes:
+        - createTable:
+            tableName: addresses
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: fk_addresses_order
+                    references: orders(id)
+              - column:
+                  name: street
+                  type: varchar(64)
+              - column:
+                  name: city
+                  type: varchar(64)
+              - column:
+                  name: state
+                  type: varchar(64)
+              - column:
+                  name: country
+                  type: varchar(64)
+              - column:
+                  name: zipcode
+                  type: varchar(64)

@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: create products table
+      id: create-product-table
       author: Agil Aghamirzayev
       changes:
         - createTable:
@@ -12,7 +12,6 @@ databaseChangeLog:
                   autoIncrement: true
                   constraints:
                     primaryKey: true
-                    nullable: false
               - column:
                   name: stock_keeping_unit
                   type: varchar(64)

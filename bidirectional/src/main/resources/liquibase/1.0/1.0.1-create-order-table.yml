@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: create-product-table
+      id: create-order-table
       author: Agil Aghamirzayev
       changes:
         - createTable:
-            tableName: products
+            tableName: orders
             columns:
               - column:
                   name: id
@@ -13,40 +13,26 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
               - column:
-                  name: stock_keeping_unit
+                  name: order_tracking_number
                   type: varchar(64)
               - column:
-                  name: name
-                  type: varchar(64)
+                  name: total_quantity
+                  type: int
               - column:
-                  name: description
-                  type: varchar(255)
-              - column:
-                  name: price
+                  name: total_price
                   type: decimal(19,2)
               - column:
-                  name: active
-                  type: bool
-              - column:
-                  name: image_url
-                  type: varchar(64)
+                  name: status
+                  type: varchar(16)
               - column:
                   name: created_date
                   type: timestamp
                   defaultValue: now()
-                  remarks: created date of the column
                   constraints:
                     nullable: false
               - column:
                   name: last_modified_date
                   type: timestamp
                   defaultValue: now()
-                  remarks: updated date of the column
                   constraints:
                     nullable: false
-              - column:
-                  name: created_by
-                  type: varchar(64)
-              - column:
-                  name: last_modified_by
-                  type: varchar(64)

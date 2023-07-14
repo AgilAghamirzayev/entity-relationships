@@ -25,6 +25,12 @@ public class Address {
     private String country;
     private String zipcode;
 
+    @MapsId
+    @JoinColumn(name = "id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @ToString.Exclude
+    private Order order;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
