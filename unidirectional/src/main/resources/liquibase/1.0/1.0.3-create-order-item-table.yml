@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Agil Aghamirzayev
       changes:
         - createTable:
-            tableName: order-items
+            tableName: order_items
             columns:
               - column:
                   name: id
@@ -23,6 +23,12 @@ databaseChangeLog:
                   type: int
               - column:
                   name: product_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_order_item_product
+                    references: products(id)
+              - column:
+                  name: order_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk_order_item_order
