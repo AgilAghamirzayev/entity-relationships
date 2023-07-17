@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Set;
 
 @SpringBootTest
@@ -31,6 +32,7 @@ public class OneToManyMappingTest {
         Product product2 = productRepository.findById(2L).orElseThrow(() -> new RuntimeException("Not found"));
 
         Address address = Address.builder()
+                .order(order)
                 .country("Azerbaijan")
                 .city("Baku")
                 .state("Narimanov")
@@ -62,10 +64,22 @@ public class OneToManyMappingTest {
 
     @Test
     void selectOrder() {
-        Order order = orderRepository.findById(1L).get();
+        Order order = orderRepository.findById(3L).orElseThrow();
 
-        System.out.println(order);
+        System.out.println(order.getStatus());
+//        order.getOrderItems().forEach(System.out::println);
     }
+
+    @Test
+    void selectOrderList() {
+        List<Order> all = orderRepository.findAll();
+
+        all.forEach(order -> {
+            System.out.println(order.getStatus());
+            order.getOrderItems().forEach(System.out::println);
+        });
+    }
+
 
     @Test
     void updateOrder() {

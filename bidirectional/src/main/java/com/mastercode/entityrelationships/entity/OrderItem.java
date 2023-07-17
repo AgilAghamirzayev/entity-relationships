@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @DynamicUpdate
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "order_items", schema = "ecommerce")
+@Table(name = "order_items")
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +25,11 @@ public class OrderItem {
 
     @OneToOne
     @JoinColumn(name = "product_id")
+    @ToString.Exclude
     private Product product;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")
+    @ToString.Exclude
+    private Order order;
 }

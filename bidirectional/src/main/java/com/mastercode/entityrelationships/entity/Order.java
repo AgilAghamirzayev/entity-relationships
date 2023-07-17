@@ -9,6 +9,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -40,6 +41,18 @@ public class Order {
     )
     @ToString.Exclude
     private Address billingAddress;
+
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            mappedBy = "order")
+    @ToString.Exclude
+    private Set<OrderItem> orderItems;
+
+    public BigDecimal getTotalAmount() {
+        return orderItems.stream()
+                .map(item -> item.getProduct().getPrice())
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
 
     @Override
     public boolean equals(Object o) {

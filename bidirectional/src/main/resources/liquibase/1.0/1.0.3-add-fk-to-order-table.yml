@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-fk-to-order-table
+      author: Agil Aghamirzayev
+      changes:
+        - addColumn:
+            tableName: orders
+            columns:
+              - column:
+                  name: billing_address_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_order_billing_address
+                    references: addresses(id)
+
+

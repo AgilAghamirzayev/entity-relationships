@@ -24,7 +24,18 @@ class ProductRepositoryTest {
                 .imageUrl("product1.jpg")
                 .build();
 
+
+        Product product2 = Product.builder()
+                .name("product 2")
+                .description("product 2 description")
+                .sku("100ABC")
+                .price(new BigDecimal("12.99"))
+                .active(Boolean.TRUE)
+                .imageUrl("product2.jpg")
+                .build();
+
         Product savedProduct = productRepository.save(product);
+        productRepository.save(product2);
 
         System.out.println(savedProduct);
     }
