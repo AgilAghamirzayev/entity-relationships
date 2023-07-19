@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-user-fk-to-product-table
+      author: Agil Aghamirzayev
+      changes:
+        - addColumn:
+            tableName: products
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_product_to_user
+                    references: users(id)

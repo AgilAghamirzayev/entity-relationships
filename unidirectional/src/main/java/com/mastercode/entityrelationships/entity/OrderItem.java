@@ -24,6 +24,6 @@ public class OrderItem {
     private Integer quantity;
 
     @OneToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product product;
 }

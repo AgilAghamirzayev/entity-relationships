@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-role-table
+      author: Agil Aghamirzayev
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(64)

@@ -44,8 +44,8 @@ public class Product {
     @LastModifiedBy
     private String lastModifiedBy;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id")
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
     private ProductCategory category;
 
     @Override

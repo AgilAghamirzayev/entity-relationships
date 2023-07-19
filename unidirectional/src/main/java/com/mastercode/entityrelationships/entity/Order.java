@@ -41,7 +41,7 @@ public class Order {
     private Address billingAddress;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "order_id", referencedColumnName = "id")
     private Set<OrderItem> orderItems;
 
     public BigDecimal getTotalAmount() {

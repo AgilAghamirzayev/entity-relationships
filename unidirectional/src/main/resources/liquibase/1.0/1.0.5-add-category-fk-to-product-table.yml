@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-category-fk-to-product-table
+      author: Agil Aghamirzayev
+      changes:
+        - addColumn:
+            tableName: products
+            columns:
+              - column:
+                  name: category_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_product_to_product_category
+                    references: product_categories(id)

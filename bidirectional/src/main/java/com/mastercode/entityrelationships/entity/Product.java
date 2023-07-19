@@ -44,6 +44,10 @@ public class Product {
     @LastModifiedBy
     private String lastModifiedBy;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private ProductCategory category;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
