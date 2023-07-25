@@ -30,6 +30,7 @@ public class Product {
     private String description;
     private BigDecimal price;
     private Boolean active;
+    private Boolean isDeleted;
     private String imageUrl;
 
     @Transient // don't persist

@@ -28,6 +28,10 @@ databaseChangeLog:
                   name: active
                   type: bool
               - column:
+                  name: is_deleted
+                  type: bool
+                  defaultValue: false
+              - column:
                   name: image_url
                   type: varchar(64)
               - column:

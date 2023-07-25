@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/bidirectional.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bidirectional.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/unidirectional.main.iml" filepath="$PROJECT_DIR$/.idea/modules/unidirectional.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unidirectional.test.iml" filepath="$PROJECT_DIR$/.idea/modules/unidirectional.test.iml" />
     </modules>
   </component>
 </project>

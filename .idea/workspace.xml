@@ -5,35 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c592504e-74be-4607-93f1-571904c6c06f" name="Changes" comment="Add one-to-one relations">
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/entity/ProductCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/repository/ProductCategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/resources/liquibase/1.0/1.0.5-create-product-category-table.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/resources/liquibase/1.0/1.0.7-create-user-table.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/resources/liquibase/1.0/1.0.8-create-role-table.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bidirectional/src/main/resources/liquibase/1.0/1.0.9-create-user-role-table.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/database-diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/erd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/service/Initialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.5-add-category-fk-to-product-table.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.9-add-user-fk-to-product-table.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/model/request/ProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/model/request/UpdateProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/model/response/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unidirectional/src/test/groovy/com/mastercode/entityrelationships/service/ProductServiceTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f86b566-7973-4d5e-8ee1-6f1e5ef2adab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1f86b566-7973-4d5e-8ee1-6f1e5ef2adab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce-bi.9FZijA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce-bi.9FZijA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce-bi.9FZijA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce-bi.9FZijA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce.QLYXWw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce.QLYXWw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce.QLYXWw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/ecommerce.QLYXWw/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/pullm.yBphBg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/pullm.yBphBg/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/pullm.yBphBg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a06ff33b-54f7-4217-b9c0-9e513ac68a38/storage_v2/_src_/database/pullm.yBphBg/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/bidirectional.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/bidirectional.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/unidirectional.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/unidirectional.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/unidirectional.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/unidirectional.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2023_23_14_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2023_23_14__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/bidirectional/src/main/java/com/mastercode/entityrelationships/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.2-create-order-table.yml" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.2-create-order-table.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.5-add-fk-to-product-table.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bidirectional/src/main/resources/liquibase/1.0/1.0.6-add-fk-to-product-table.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/service/Initialize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.0-create-product-table.yml" beforeDir="false" afterPath="$PROJECT_DIR$/unidirectional/src/main/resources/liquibase/1.0/1.0.0-create-product-table.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/test/java/com/mastercode/entityrelationships/EntityRelationshipsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/test/java/com/mastercode/entityrelationships/repository/ManyToManyMappingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/test/java/com/mastercode/entityrelationships/repository/OneToManyMappingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/test/java/com/mastercode/entityrelationships/repository/OneToOneMappingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/test/java/com/mastercode/entityrelationships/repository/ProductCategoryRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unidirectional/src/test/java/com/mastercode/entityrelationships/repository/ProductRepositoryTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +94,10 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="15727ff3-b41a-4ab0-8339-2928928db5bf" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///folder-pre-request-script-drafts.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///folder-test-script-drafts.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
@@ -93,36 +112,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Programming/entity-relationships/unidirectional/src/main/resources/liquibase/1.0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "ce4e5963ee0d0002fb35a4314216811b",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RESTKit.sync.cert.Ide&quot;: &quot;true&quot;,
+    &quot;RESTKit.sync.env.Ide&quot;: &quot;true&quot;,
+    &quot;RESTKit.sync.requestConfig.Ide&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programming/entity-relationships/unidirectional/src/main/resources/liquibase/1.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;ce4e5963ee0d0002fb35a4314216811b&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programming\entity-relationships\unidirectional\src\main\resources\liquibase\1.0" />
@@ -136,9 +158,30 @@
       <recent name="D:\Programming\entity-relationships\unidirectional\src\main\resources\" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mastercode.entityrelationships.model.request" />
+      <recent name="com.mastercode.entityrelationships.model.response" />
+      <recent name="com.mastercode.entityrelationships.mapper" />
       <recent name="com.mastercode.entityrelationships.repository" />
       <recent name="com.mastercode.entityrelationships.entity" />
     </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 7 services " type="9abd1fc8:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 7 services " type="9abd1fc8:RestServiceStructure$RootNode" />
+          <item name="unidirectional.main" type="296880de:RestServiceStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="Found 7 services " type="9abd1fc8:RestServiceStructure$RootNode" />
+          <item name="bidirectional.main" type="296880de:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -147,80 +190,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EntityRelationshipsApplication">
-    <configuration name="OneToOneMappingTest.deleteOrder (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/bidirectional" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.mastercode.entityrelationships.repository.OneToOneMappingTest.deleteOrder&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="OneToOneMappingTest.saveOrder (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/bidirectional" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.mastercode.entityrelationships.repository.OneToOneMappingTest.saveOrder&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="OneToOneMappingTest.updateOrder (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/bidirectional" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.mastercode.entityrelationships.repository.OneToOneMappingTest.updateOrder&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductRepositoryTest.saveProduct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ProductServiceTest.CreateProduct with null request">
+    <configuration name="ProductServiceTest.CreateProduct with null request" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/unidirectional" />
@@ -233,7 +204,103 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.mastercode.entityrelationships.repository.ProductRepositoryTest.saveProduct&quot;" />
+            <option value="&quot;com.mastercode.entityrelationships.service.ProductServiceTest.CreateProduct with null request&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductServiceTest.CreateProduct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/unidirectional" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mastercode.entityrelationships.service.ProductServiceTest.CreateProduct&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductServiceTest.GetProductById success case" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/unidirectional" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mastercode.entityrelationships.service.ProductServiceTest.GetProductById success case&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductServiceTest.SearchProducts success empty list" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/unidirectional" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mastercode.entityrelationships.service.ProductServiceTest.SearchProducts success empty list&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductServiceTest.SearchProducts success full list" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/unidirectional" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mastercode.entityrelationships.service.ProductServiceTest.SearchProducts success full list&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -264,26 +331,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="bidirectional.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="bidirectional/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.bidirectional.db: Compose Deployment" />
-        <item itemvalue="Gradle.ProductRepositoryTest.saveProduct" />
-        <item itemvalue="Gradle.OneToOneMappingTest.updateOrder (1)" />
-        <item itemvalue="Gradle.OneToOneMappingTest.saveOrder (1)" />
-        <item itemvalue="Gradle.OneToOneMappingTest.deleteOrder (1)" />
+        <item itemvalue="Gradle.ProductServiceTest.CreateProduct with null request" />
+        <item itemvalue="Gradle.ProductServiceTest.CreateProduct" />
+        <item itemvalue="Gradle.ProductServiceTest.GetProductById success case" />
+        <item itemvalue="Gradle.ProductServiceTest.SearchProducts success full list" />
+        <item itemvalue="Gradle.ProductServiceTest.SearchProducts success empty list" />
       </list>
     </recent_temporary>
   </component>
@@ -300,25 +354,21 @@
       <workItem from="1689339675006" duration="2238000" />
       <workItem from="1689341960301" duration="1394000" />
       <workItem from="1689708623384" duration="604000" />
-      <workItem from="1689709570105" duration="9168000" />
+      <workItem from="1689709570105" duration="10078000" />
+      <workItem from="1689954727152" duration="10932000" />
+      <workItem from="1689992312241" duration="580000" />
+      <workItem from="1689992966438" duration="1040000" />
+      <workItem from="1689994059542" duration="535000" />
+      <workItem from="1689994657127" duration="252000" />
+      <workItem from="1690218980101" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/unidirectional/src/main/java/com/mastercode/entityrelationships/service/Initialize.java</url>
-          <line>47</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
