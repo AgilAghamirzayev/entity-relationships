@@ -9,6 +9,8 @@ import com.mastercode.entityrelationships.repository.ProductRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Log4j2
@@ -26,15 +28,18 @@ public class ProductService {
     return productMapper.mapToProductResponse(product);
   }
 
+
+  @Cacheable(value = "products")
   public List<ProductResponse> searchProducts(String query) {
     List<Product> products = productRepository.searchProducts(query);
     return productMapper.mapToProductResponseList(products);
   }
 
+  @CachePut(value = "products")
   public void createProduct(ProductRequest request) {
     Product product = productMapper.mapToProduct(request);
     if (product == null) {
-      log.info("createProduct().FAIK. Product not created");
+      log.info("createProduct().FAIL. Product not created");
       return;
     }
 

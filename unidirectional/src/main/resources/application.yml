@@ -13,3 +13,8 @@ spring:
 
   jpa:
     show-sql: true
+#    default
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
